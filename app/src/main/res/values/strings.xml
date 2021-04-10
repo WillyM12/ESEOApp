@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ESEO App</string>
+    <string name="app_name" translatable="false">ESEO App</string>
+    <string name="splash_text" translatable="false">Willy Martin 2021</string>
+    <string name="localisez_vous">Localisez-vous</string>
+    <string name="histoLocal_button_main">Regardez où vous êtes allez</string>
 </resources>
