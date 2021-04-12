@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".data.model.recycler.RecyclerParameterActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylcer_parameter"
+        tools:listitem="@layout/parametre_list"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

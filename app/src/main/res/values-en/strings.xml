@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="localisez_vous">Locate yourself</string>
+    <string name="histoLocal_button_main">Look where you have been</string>
+    <string name="recyclerActivityParamTitle">Settings</string>
+    <string name="parametres_appli">Application settings</string>
+    <string name="parametres_loc">Location settings</string>
+    <string name="ESEO_loc">ESEO Location</string>
+    <string name="ESEO_site">ESEO Website</string>
+    <string name="boite_mail">Email</string>
+    <string name="recup_pos">Get my position</string>
+    <string name="location">My location</string>
+    <string name="distance_avec_l_eseo">Distance from ESEO</string>
+    <string name="permission_cancel">Permission canceled</string>
+    <string name="permission_cancel_message">You cannot access to your location</string>
+    <string name="local_impossible_message">Error location</string>
+    <string name="recyclerActivityLocatTitle">Localisations list</string>
 </resources>
