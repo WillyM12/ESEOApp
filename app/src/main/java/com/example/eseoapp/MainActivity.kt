@@ -26,14 +26,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Affiche la vue de paramètre après click sur le bouton "settings"
         findViewById<ImageButton>(R.id.settings_main).setOnClickListener {
             startActivity(RecyclerParameterActivity.getStartIntent(this))
         }
 
+        // Affiche la vue de localisation après click sur le bouton "Localisez-vous"
         findViewById<Button>(R.id.localisation_main).setOnClickListener {
             startActivity(LocationActivity.getStartIntent(this))
         }
 
+        // Affiche la vue de la liste des localisation après click sur le bouton "Regardez où vous êtes allez"
         findViewById<Button>(R.id.histoLocal_main).setOnClickListener {
             startActivity(RecyclerLocationActivity.getStartIntent(this))
         }

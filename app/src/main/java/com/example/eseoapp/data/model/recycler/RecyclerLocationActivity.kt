@@ -18,30 +18,33 @@ class RecyclerLocationActivity : AppCompatActivity() {
             return Intent(context, RecyclerLocationActivity::class.java)
         }
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_location)
 
+        // Création de l'action barre situé en haut de l'écran
         supportActionBar?.apply {
             setTitle(R.string.recyclerActivityLocatTitle)
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
 
-        // Exemple de déclaration dans la datasource (à déclarer dans votre Activity)
+        // Lecture de la liste des localisation enregistré dans l'historique sous le format de "LocationItem"
         var array = LocalPreferences.getInstance(this).getHistory()?.map {
             LocationItem(it, R.drawable.ic_baseline_location_on_24)
         }?.toTypedArray()?: run{
             emptyArray<LocationItem>()
         }
 
-
+        // Écriture de la recycler view du "activity_recycler_location" avec le tableau de "LocationItem" rempli juste avant
         val rvDevices = findViewById<RecyclerView>(R.id.recylcer_location)
         rvDevices.layoutManager = LinearLayoutManager(this)
         rvDevices.adapter = LocationAdapter(array)
 
     }
 
+    // Activation du bouton retour dans l'action barre
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true

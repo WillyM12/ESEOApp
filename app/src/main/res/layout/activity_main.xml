@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_backgroud"
     tools:context=".MainActivity">
 
     <ImageView
@@ -19,6 +20,7 @@
     <Button
         android:id="@+id/localisation_main"
         android:text="@string/localisez_vous"
+        android:backgroundTint="@color/common_google_signin_btn_text_light_focused"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +31,7 @@
     <Button
         android:id="@+id/histoLocal_main"
         android:text="@string/histoLocal_button_main"
+        android:backgroundTint="@color/common_google_signin_btn_text_light_focused"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,17 +42,10 @@
     <ImageButton
         android:id="@+id/settings_main"
         android:src="@drawable/ic_baseline_settings_64"
+        android:background="@drawable/md_transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

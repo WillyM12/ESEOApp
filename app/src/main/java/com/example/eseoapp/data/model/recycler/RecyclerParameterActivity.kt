@@ -22,13 +22,14 @@ class RecyclerParameterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_parameter)
 
+        // Création de l'action barre situé en haut de l'écran
         supportActionBar?.apply {
             setTitle(R.string.recyclerActivityParamTitle)
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
 
-        // Exemple de déclaration dans la datasource (à déclarer dans votre Activity)
+        // Remplissage d'un tableau sous le format de "SettingsItem" avec la configurarion souhaitée
         val array = arrayOf(
                 SettingsItem(getString(R.string.parametres_appli), R.drawable.ic_baseline_settings_64) {
                     val targetIntent = Intent().apply {
@@ -53,12 +54,13 @@ class RecyclerParameterActivity : AppCompatActivity() {
                     startActivity(Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:")));
                 })
 
-
+        // Écriture de la recycler view du "activity_recycler_parameter" avec le tableau de "SettingsItem" rempli juste avant
         val rvDevices = findViewById<RecyclerView>(R.id.recylcer_parameter)
         rvDevices.layoutManager = LinearLayoutManager(this)
         rvDevices.adapter = ParameterAdapter(array)
     }
 
+    // Activation du bouton retour dans l'action barre
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true

@@ -12,6 +12,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        // Affiche la main activity après 3s
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(MainActivity.getStartIntent(this))
             finish()

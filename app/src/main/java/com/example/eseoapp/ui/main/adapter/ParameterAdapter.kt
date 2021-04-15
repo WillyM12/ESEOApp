@@ -36,6 +36,7 @@ class ParameterAdapter(private val deviceList: Array<SettingsItem>) : RecyclerVi
         holder.showItem(deviceList[position])
     }
 
+    // Retourne le nombre d'item de la liste
     override fun getItemCount(): Int {
         return deviceList.size
     }

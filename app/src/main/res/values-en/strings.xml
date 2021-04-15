@@ -12,7 +12,10 @@
     <string name="location">My location</string>
     <string name="distance_avec_l_eseo">Distance from ESEO</string>
     <string name="permission_cancel">Permission canceled</string>
-    <string name="permission_cancel_message">You cannot access to your location</string>
+    <string name="permission_cancel_message">You cannot access to your location, allow the location in the settings to locate you</string>
     <string name="local_impossible_message">Error location</string>
     <string name="recyclerActivityLocatTitle">Localisations list</string>
+    <string name="distance_message_u2">You can walk to get there lazy !</string>
+    <string name="distance_message_u5">Go for a run, it will only do you good !</string>
+    <string name="dsitance_message_up_to5">Ok that starts to make far to go there by foot...</string>
 </resources>

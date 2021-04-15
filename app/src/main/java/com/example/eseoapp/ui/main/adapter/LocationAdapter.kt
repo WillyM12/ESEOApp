@@ -31,6 +31,7 @@ class LocationAdapter(private val deviceList: Array<LocationItem>) : RecyclerVie
         holder.showItem(deviceList[position])
     }
 
+    // Retourne le nombre d'item de la liste
     override fun getItemCount(): Int {
         return deviceList.size
     }

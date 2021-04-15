@@ -5,8 +5,8 @@
     <string name="localisez_vous">Localisez-vous</string>
     <string name="histoLocal_button_main">Regardez où vous êtes allez</string>
     <string name="recyclerActivityParamTitle">Paramètres</string>
-    <string name="parametres_appli">Paramètre application</string>
-    <string name="parametres_loc">Paramètre localisation</string>
+    <string name="parametres_appli">Paramètres application</string>
+    <string name="parametres_loc">Paramètres localisation</string>
     <string name="ESEO_loc">Localisation de l\'ESEO</string>
     <string name="ESEO_site">Site de l\'ESEO</string>
     <string name="boite_mail">Boîte mail</string>
@@ -15,9 +15,12 @@
     <string name="distance_avec_l_eseo">Distance avec l\'ESEO :</string>
     <string name="km_avec_eseo" translatable="false">Distance</string>
     <string name="permission_cancel">Permission refusée</string>
-    <string name="permission_cancel_message">Vous ne pouvez pas accéder à votre localisation</string>
+    <string name="permission_cancel_message">Vous ne pouvez pas accéder à votre localisation, autorisez la localisation dans les paramètres pour vous localisez</string>
     <string name="ok" translatable="false">Ok</string>
     <string name="local_impossible_message">Localisation impossible</string>
     <string name="zero_km" translatable="false">0km</string>
     <string name="recyclerActivityLocatTitle">Liste des localisations</string>
+    <string name="distance_message_u2">Tu peux marcher pour y aller feignasse !</string>
+    <string name="distance_message_u5">Vas y en courant ça pourra que te faire du bien !</string>
+    <string name="dsitance_message_up_to5">Ok ça commence à faire loin pour y aller à pieds...</string>
 </resources>
