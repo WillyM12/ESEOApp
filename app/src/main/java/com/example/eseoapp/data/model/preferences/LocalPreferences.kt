@@ -18,6 +18,16 @@ class LocalPreferences private constructor(context: Context) {
         return sharedPreferences.getStringSet("histories", mutableSetOf<String>().toMutableSet())
     }
 
+    // Vide l'historique
+    fun emptyHistory() {
+        sharedPreferences.edit().clear().apply()
+    }
+
+    // Vérifie si l'historique est vide
+    fun isEmpty(): Boolean? {
+        val history = this.getHistory()
+        return history?.isEmpty()
+    }
 
     companion object {
         private var INSTANCE: LocalPreferences? = null

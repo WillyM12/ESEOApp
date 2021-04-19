@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import com.example.eseoapp.data.model.item.LocationItem
 import com.example.eseoapp.data.model.preferences.LocalPreferences
 import com.example.eseoapp.data.model.recycler.RecyclerLocationActivity
@@ -36,9 +37,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(LocationActivity.getStartIntent(this))
         }
 
-        // Affiche la vue de la liste des localisation après click sur le bouton "Regardez où vous êtes allez"
+        // Affiche la vue de la liste des localisation après click sur le bouton "Regardez où vous êtes allez" si la liste n'est pas vide sinon affiche un Toast
         findViewById<Button>(R.id.histoLocal_main).setOnClickListener {
-            startActivity(RecyclerLocationActivity.getStartIntent(this))
+            if (LocalPreferences.getInstance(this).isEmpty() == false){
+                startActivity(RecyclerLocationActivity.getStartIntent(this))
+            }
+            else{
+                Toast.makeText(this, getString(R.string.empty_list), Toast.LENGTH_SHORT).show()
+            }
+
         }
 
     }

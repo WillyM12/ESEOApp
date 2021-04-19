@@ -23,4 +23,6 @@
     <string name="distance_message_u2">Tu peux marcher pour y aller feignasse !</string>
     <string name="distance_message_u5">Vas y en courant ça pourra que te faire du bien !</string>
     <string name="dsitance_message_up_to5">Ok ça commence à faire loin pour y aller à pieds...</string>
+    <string name="empty_location">Effacer la liste</string>
+    <string name="empty_list">Liste vide</string>
 </resources>

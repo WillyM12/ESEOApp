@@ -17,6 +17,11 @@ class LocationAdapter(private val deviceList: Array<LocationItem>) : RecyclerVie
             itemView.findViewById<TextView>(R.id.location_text_list).text = device.name
             itemView.findViewById<ImageView>(R.id.location_image_list).setImageResource(device.icon)
 
+            if(device.onClick != null) {
+                itemView.setOnClickListener {
+                    device.onClick()
+                }
+            }
         }
     }
 

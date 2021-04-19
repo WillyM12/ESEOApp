@@ -32,11 +32,9 @@ class RecyclerParameterActivity : AppCompatActivity() {
         // Remplissage d'un tableau sous le format de "SettingsItem" avec la configurarion souhaitée
         val array = arrayOf(
                 SettingsItem(getString(R.string.parametres_appli), R.drawable.ic_baseline_settings_64) {
-                    val targetIntent = Intent().apply {
-                        action = Settings.ACTION_APPLICATION_SETTINGS
-                    }
-
-                    startActivity(targetIntent);
+                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                    intent.data = Uri.parse("package:" + "com.example.eseoapp")
+                    startActivity(intent)
                 },
                 SettingsItem(getString(R.string.parametres_loc), R.drawable.ic_baseline_location_on_24) {
                     val targetIntent = Intent().apply {

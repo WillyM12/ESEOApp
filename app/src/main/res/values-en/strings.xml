@@ -18,4 +18,6 @@
     <string name="distance_message_u2">You can walk to get there lazy !</string>
     <string name="distance_message_u5">Go for a run, it will only do you good !</string>
     <string name="dsitance_message_up_to5">Ok that starts to make far to go there by foot...</string>
+    <string name="empty_location">Erase list</string>
+    <string name="empty_list">Empty list</string>
 </resources>

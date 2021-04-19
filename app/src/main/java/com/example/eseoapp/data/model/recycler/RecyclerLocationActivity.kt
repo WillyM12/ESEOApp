@@ -2,15 +2,19 @@ package com.example.eseoapp.data.model.recycler
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.location.Address
+import android.location.Geocoder
+import android.net.Uri
 import android.os.Bundle
-import android.widget.TextView
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eseoapp.R
 import com.example.eseoapp.data.model.item.LocationItem
-import com.example.eseoapp.ui.main.adapter.LocationAdapter
 import com.example.eseoapp.data.model.preferences.LocalPreferences
+import com.example.eseoapp.ui.main.adapter.LocationAdapter
+
 
 class RecyclerLocationActivity : AppCompatActivity() {
     companion object {
@@ -30,9 +34,26 @@ class RecyclerLocationActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
         }
 
+        // Efface la liste des localisations et actualise l'activity
+        findViewById<Button>(R.id.empty_location).setOnClickListener {
+            LocalPreferences.getInstance(this).emptyHistory()
+            finish()
+            overridePendingTransition(0, 0)
+            startActivity(getStartIntent(this))
+            overridePendingTransition(0, 0)
+        }
+
         // Lecture de la liste des localisation enregistré dans l'historique sous le format de "LocationItem"
         var array = LocalPreferences.getInstance(this).getHistory()?.map {
-            LocationItem(it, R.drawable.ic_baseline_location_on_24)
+            LocationItem(it, R.drawable.ic_baseline_location_on_24){
+                val coder = Geocoder(this)
+                val address: List<Address>
+                address = coder.getFromLocationName(it, 1);
+                val location = address[0];
+
+                // Affiche la position sur un carte
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("geo:"+location.latitude+","+location.longitude)));
+            }
         }?.toTypedArray()?: run{
             emptyArray<LocationItem>()
         }
